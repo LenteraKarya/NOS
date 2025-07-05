@@ -19,22 +19,24 @@
     <link rel="icon" href="https://raw.githubusercontent.com/LenteraKarya/jualan-kita/main/assets/images/logo-jualan-kita.png" type="image/png">
     <style>
         :root {
-            --primary: #2a4365; /* Deep blue */
+            --primary: #1a365d; /* Deep blue */
             --secondary: #4299e1; /* Light blue */
             --accent: #e67e22; /* Warm orange */
             --light: #f8f9fa;
-            --dark: #1a365d;
+            --dark: #1a202c;
             --text: #4a5568;
             --text-light: #718096;
             --success: #38a169;
             --warning: #dd6b20;
             --danger: #e53e3e;
-            --transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
             --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
             --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05);
             --shadow-xl: 0 20px 50px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1);
             --gold: #d4af37; /* Gold color for premium accents */
+            --section-padding: 8rem 0;
+            --section-padding-sm: 6rem 0;
         }
         
         * {
@@ -152,7 +154,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(42, 67, 101, 0.9), rgba(26, 54, 93, 0.95));
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9), rgba(26, 32, 44, 0.95));
             z-index: -1;
         }
         
@@ -513,7 +515,7 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: white;
+            background: white;
             min-width: 220px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             border-radius: 8px;
@@ -573,7 +575,7 @@
         
         /* Sections */
         section {
-            padding: 6rem 0;
+            padding: var(--section-padding);
             position: relative;
         }
         
@@ -594,6 +596,15 @@
             background: var(--accent);
             margin: 1.5rem auto 0;
             border-radius: 2px;
+        }
+        
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.15rem;
+            line-height: 1.8;
         }
         
         /* Services Section */
@@ -866,7 +877,7 @@
         
         /* Testimonial Button Section */
         .testimonial-button-section {
-            padding: 6rem 0;
+            padding: var(--section-padding);
             text-align: center;
             background-color: var(--light);
             position: relative;
@@ -1487,261 +1498,6 @@
             opacity: 1;
         }
         
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .logo {
-                font-size: 4rem;
-            }
-            
-            .logo img {
-                height: 100px;
-            }
-            
-            .tagline {
-                font-size: 1.8rem;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .logo {
-                font-size: 3.5rem;
-            }
-            
-            .logo img {
-                height: 90px;
-            }
-            
-            .tagline {
-                font-size: 1.6rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info, .contact-form {
-                padding: 3rem;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 400px;
-                height: 100vh;
-                background: white;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 2rem;
-                transition: var(--transition);
-                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-            }
-            
-            .nav-links.active {
-                right: 0;
-            }
-            
-            .mobile-menu-toggle, .search-toggle {
-                display: block;
-            }
-            
-            .nav-search {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                padding: 1rem;
-                background: white;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav-search.active {
-                display: block;
-            }
-            
-            .nav-container {
-                padding: 1rem;
-            }
-            
-            .contact-bar {
-                bottom: 2rem;
-                right: 2rem;
-            }
-            
-            /* Mobile dropdown menu */
-            .dropdown-content {
-                position: static;
-                display: none;
-                box-shadow: none;
-                padding: 0;
-                margin-top: 1rem;
-                background: rgba(0,0,0,0.02);
-                border-radius: 8px;
-            }
-            
-            .dropdown.active .dropdown-content {
-                display: block;
-            }
-            
-            .booking-form-container {
-                padding: 3rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            header {
-                min-height: auto;
-                padding: 0;
-            }
-            
-            .logo {
-                font-size: 3rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .logo img {
-                height: 80px;
-            }
-            
-            .tagline {
-                font-size: 1.4rem;
-            }
-            
-            .header-search {
-                max-width: 90%;
-                margin-bottom: 2rem;
-            }
-            
-            .nav-container {
-                flex-direction: row;
-                gap: 1rem;
-                padding: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .contact-bar {
-                bottom: 1.5rem;
-                right: 1.5rem;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .footer-about {
-                grid-column: 1 / -1;
-            }
-            
-            .modal-content {
-                padding: 2.5rem;
-            }
-            
-            .booking-form-container {
-                padding: 2.5rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .logo {
-                font-size: 2.5rem;
-            }
-            
-            .logo img {
-                height: 70px;
-            }
-            
-            .tagline {
-                font-size: 1.3rem;
-            }
-            
-            .header-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-            
-            .section-title {
-                font-size: 1.7rem;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .contact-info, .contact-form {
-                padding: 2.5rem 2rem;
-            }
-            
-            .contact-bar {
-                bottom: 1rem;
-                right: 1rem;
-            }
-            
-            .contact-btn {
-                width: 55px;
-                height: 55px;
-                font-size: 1.6rem;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-content {
-                padding: 2rem 1.5rem;
-            }
-            
-            .payment-options {
-                flex-direction: column;
-            }
-            
-            .booking-form-container {
-                padding: 2rem 1.5rem;
-            }
-        }
-        
-        @media (max-width: 400px) {
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .logo img {
-                height: 60px;
-            }
-            
-            .tagline {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
-            
-            .modal-content {
-                padding: 1.5rem;
-            }
-        }
-
         /* Custom Styles for NOS Ojek */
         .map-container {
             height: 400px;
@@ -2162,6 +1918,311 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Driver Grid Section */
+        .drivers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .driver-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spec-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .spec-value {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .action-buttons {
+            margin-top: 1.5rem;
+        }
+
+        .btn-small {
+            padding: 0.8rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .logo {
+                font-size: 4rem;
+            }
+            
+            .logo img {
+                height: 100px;
+            }
+            
+            .tagline {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .logo {
+                font-size: 3.5rem;
+            }
+            
+            .logo img {
+                height: 90px;
+            }
+            
+            .tagline {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info, .contact-form {
+                padding: 3rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .mobile-menu-toggle, .search-toggle {
+                display: block;
+            }
+            
+            .nav-search {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-search.active {
+                display: block;
+            }
+            
+            .nav-container {
+                padding: 1rem;
+            }
+            
+            .contact-bar {
+                bottom: 2rem;
+                right: 2rem;
+            }
+            
+            /* Mobile dropdown menu */
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                padding: 0;
+                margin-top: 1rem;
+                background: rgba(0,0,0,0.02);
+                border-radius: 8px;
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+            
+            .booking-form-container {
+                padding: 3rem;
+            }
+
+            section {
+                padding: var(--section-padding-sm);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                min-height: auto;
+                padding: 0;
+            }
+            
+            .logo {
+                font-size: 3rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .logo img {
+                height: 80px;
+            }
+            
+            .tagline {
+                font-size: 1.4rem;
+            }
+            
+            .header-search {
+                max-width: 90%;
+                margin-bottom: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: row;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-bar {
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-about {
+                grid-column: 1 / -1;
+            }
+            
+            .modal-content {
+                padding: 2.5rem;
+            }
+            
+            .booking-form-container {
+                padding: 2.5rem;
+            }
+
+            .drivers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .logo img {
+                height: 70px;
+            }
+            
+            .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .header-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-info, .contact-form {
+                padding: 2.5rem 2rem;
+            }
+            
+            .contact-bar {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .contact-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .payment-options {
+                flex-direction: column;
+            }
+            
+            .booking-form-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .logo img {
+                height: 60px;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2247,6 +2308,7 @@
         <!-- Services Section -->
         <section class="services" id="services">
             <h2 class="section-title">Layanan Kami</h2>
+            <p class="section-intro">Kami menyediakan berbagai layanan transportasi yang nyaman dan aman untuk memenuhi kebutuhan perjalanan Anda di Situbondo.</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -2275,6 +2337,7 @@
         <!-- Order Section -->
         <section class="booking" id="order">
             <h2 class="section-title">Pesan Ojek Sekarang</h2>
+            <p class="section-intro">Pesan ojek Anda dengan mudah dalam beberapa langkah sederhana. Kami siap mengantarkan Anda dengan nyaman dan aman.</p>
             <div class="booking-form-container">
                 <div class="progress-steps">
                     <div class="progress-step active" id="step1">
@@ -2498,12 +2561,10 @@
         
         <!-- Drivers Section -->
         <section class="drivers" id="drivers">
-            <h2 class="section-title">Driver Kami</h2>
-            <div class="gallery-intro">
-                <p>Driver profesional kami siap mengantarkan Anda dengan aman dan nyaman ke tujuan.</p>
-            </div>
+            <h2 class="section-title">Driver Profesional Kami</h2>
+            <p class="section-intro">Driver profesional kami siap mengantarkan Anda dengan aman dan nyaman ke tujuan. Pilih driver favorit Anda atau biarkan sistem kami yang memilihkan yang terbaik untuk Anda.</p>
             
-            <div class="services-grid">
+            <div class="drivers-grid">
                 <!-- DRIVER ITEM 1 -->
                 <div class="driver-card">
                     <img src="https://github.com/LenteraKarya/NOS/blob/main/assets/images/driver1.jpeg?raw=true" alt="Budi Santoso" class="driver-avatar">
@@ -2517,11 +2578,8 @@
                         <i class="fas fa-star-half-alt"></i>
                         4.7 (127)
                     </div>
-                    <p>
-                        Pengalaman 5 tahun sebagai driver ojek. Selalu tepat waktu dan mengenal jalan alternatif di Situbondo.
-                    </p>
                     
-                    <div class="gallery-specs">
+                    <div class="driver-specs">
                         <div class="spec-item">
                             <span class="spec-label">Kendaraan:</span>
                             <span class="spec-value">Honda Beat - Hitam</span>
@@ -2529,6 +2587,10 @@
                         <div class="spec-item">
                             <span class="spec-label">Layanan:</span>
                             <span class="spec-value">Reguler, Premium, Barang</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Pengalaman:</span>
+                            <span class="spec-value">5 Tahun</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Wilayah:</span>
@@ -2554,11 +2616,8 @@
                         <i class="fas fa-star"></i>
                         5.0 (89)
                     </div>
-                    <p>
-                        Driver perempuan profesional dengan safety record sempurna. Spesialis antar jemput sekolah dan kantor.
-                    </p>
                     
-                    <div class="gallery-specs">
+                    <div class="driver-specs">
                         <div class="spec-item">
                             <span class="spec-label">Kendaraan:</span>
                             <span class="spec-value">Yamaha NMax - Putih</span>
@@ -2566,6 +2625,10 @@
                         <div class="spec-item">
                             <span class="spec-label">Layanan:</span>
                             <span class="spec-value">Premium, Antar Jemput</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Pengalaman:</span>
+                            <span class="spec-value">3 Tahun</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Wilayah:</span>
@@ -2591,11 +2654,8 @@
                         <i class="far fa-star"></i>
                         4.2 (203)
                     </div>
-                    <p>
-                        Spesialis pengiriman barang dengan motor besar. Bisa mengangkut barang hingga 50kg dengan aman.
-                    </p>
                     
-                    <div class="gallery-specs">
+                    <div class="driver-specs">
                         <div class="spec-item">
                             <span class="spec-label">Kendaraan:</span>
                             <span class="spec-value">Honda CB150 - Merah</span>
@@ -2603,6 +2663,10 @@
                         <div class="spec-item">
                             <span class="spec-label">Layanan:</span>
                             <span class="spec-value">Barang, Reguler</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Pengalaman:</span>
+                            <span class="spec-value">7 Tahun</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Wilayah:</span>
@@ -2615,108 +2679,126 @@
                     </div>
                 </div>
                 
-             <!-- DRIVER ITEM 4 --> 
-            <div class="driver-card">
-                <img src="https://github.com/LenteraKarya/NOS/blob/main/assets/images/driver4.jpeg?raw=true" alt="Ahmad Fauzi" class="driver-avatar">
-                <div class="driver-badge active">Terdaftar</div>
-                <h3 class="service-title">Ahmad Firdaus</h3>
-                <div class="driver-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    4.6 (287)
+                <!-- DRIVER ITEM 4 --> 
+                <div class="driver-card">
+                    <img src="https://github.com/LenteraKarya/NOS/blob/main/assets/images/driver4.jpeg?raw=true" alt="Ahmad Fauzi" class="driver-avatar">
+                    <div class="driver-badge">Terdaftar</div>
+                    <h3 class="service-title">Ahmad Firdaus</h3>
+                    <div class="driver-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.6 (287)
+                    </div>
+                    
+                    <div class="driver-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Kendaraan:</span>
+                            <span class="spec-value">Honda Beat - Biru</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Layanan:</span>
+                            <span class="spec-value">Makanan, Dokumen</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Pengalaman:</span>
+                            <span class="spec-value">4 Tahun</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Wilayah:</span>
+                            <span class="spec-value">Situbondo Kota</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-small order-btn">Pesan Sekarang</button>
+                    </div>
                 </div>
-                <p>
-                    Pengemudi handal khusus pengantaran makanan dan dokumen penting. Selalu tepat waktu dengan tas khusus untuk menjaga barang tetap aman.
-                </p>
                 
-                <div class="gallery-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Kendaraan:</span>
-                        <span class="spec-value">Honda Beat - Biru</span>
+                <!-- DRIVER ITEM 5 -->
+                <div class="driver-card">
+                    <img src="https://github.com/LenteraKarya/NOS/blob/main/assets/images/driver5.jpeg?raw=true" alt="Darmawan Setiawan" class="driver-avatar">
+                    <div class="driver-badge">Terdaftar</div>
+                    <h3 class="service-title">Darmawan Setiawan</h3>
+                    <div class="driver-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        4.0 (192)
                     </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Layanan:</span>
-                        <span class="spec-value">Makanan, Dokumen</span>
+                    
+                    <div class="driver-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Kendaraan:</span>
+                            <span class="spec-value">Yamaha NMAX - Hitam</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Layanan:</span>
+                            <span class="spec-value">Hasil Bumi, Barang Pasar</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Pengalaman:</span>
+                            <span class="spec-value">6 Tahun</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Wilayah:</span>
+                            <span class="spec-value">Panarukan - Besuki</span>
+                        </div>
                     </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Wilayah:</span>
-                        <span class="spec-value">Situbondo Kota</span>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-small order-btn">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- DRIVER ITEM 6 -->
+                <div class="driver-card">
+                    <img src="https://github.com/LenteraKarya/NOS/blob/main/assets/images/driver6.jpeg?raw=true" alt="Siti Rahmawati" class="driver-avatar">
+                    <div class="driver-badge">Terdaftar</div>
+                    <h3 class="service-title">Siti Rahmawati</h3>
+                    <div class="driver-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        5.0 (145)
+                    </div>
+                    
+                    <div class="driver-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Kendaraan:</span>
+                            <span class="spec-value">Scoopy - Pink</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Layanan:</span>
+                            <span class="spec-value">Jemput Anak, Belanja</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Pengalaman:</span>
+                            <span class="spec-value">2 Tahun</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Wilayah:</span>
+                            <span class="spec-value">Mangaran - Kapongan</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-small order-btn">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
-            
-            <!-- DRIVER ITEM 5 -->
-            <div class="driver-card">
-                <img src="https://github.com/LenteraKarya/NOS/blob/main/assets/images/driver5.jpeg?raw=true" alt="Darmawan Setiawan" class="driver-avatar">
-                <div class="driver-badge active">Terdaftar</div>
-                <h3 class="service-title">Darmawan Setiawan</h3>
-                <div class="driver-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    4.0 (192)
-                </div>
-                <p>
-                    Spesialis pengiriman barang pasar dan hasil bumi. Memiliki motor dengan box besar untuk mengangkut sayuran dan hasil pertanian.
-                </p>
-                
-                <div class="gallery-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Kendaraan:</span>
-                        <span class="spec-value">Yamaha NMAX - Hitam</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Layanan:</span>
-                        <span class="spec-value">Hasil Bumi, Barang Pasar</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Wilayah:</span>
-                        <span class="spec-value">Panarukan - Besuki</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- DRIVER ITEM 6 -->
-            <div class="driver-card">
-                <img src="https://github.com/LenteraKarya/NOS/blob/main/assets/images/driver6.jpeg?raw=true" alt="Siti Rahmawati" class="driver-avatar">
-                <div class="driver-badge active">Terdaftar</div>
-                <h3 class="service-title">Siti Rahmawati</h3>
-                <div class="driver-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    5.0 (145)
-                </div>
-                <p>
-                    Pengemudi wanita terpercaya untuk layanan antar-jemput anak sekolah dan belanja harian. Ramah dan sangat hati-hati dalam berkendara.
-                </p>
-                
-                <div class="gallery-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Kendaraan:</span>
-                        <span class="spec-value">Scoopy - Pink</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Layanan:</span>
-                        <span class="spec-value">Jemput Anak, Belanja</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Wilayah:</span>
-                        <span class="spec-value">Mangaran - Kapongan</span>
-                    </div>
-                </div>
-            </div>
+        </section>
         
         <!-- Driver Registration Section -->
         <section class="registration" id="register">
             <h2 class="section-title">Daftar Menjadi Driver NOS</h2>
+            <p class="section-intro">Bergabunglah dengan jaringan driver profesional kami dan dapatkan penghasilan tambahan dengan fleksibilitas waktu kerja.</p>
             <div class="registration-section">
                 <form id="driverRegistrationForm">
                     <div class="form-group">
@@ -2841,9 +2923,7 @@
         <section class="testimonial-button-section" id="testimonials">
             <div class="container">
                 <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
-                <p style="max-width: 800px; margin: 0 auto 3rem; color: var(--text-light); font-size: 1.15rem; line-height: 1.8;">
-                    Dengarkan pengalaman langsung dari pelanggan yang telah menggunakan layanan NOS.
-                </p>
+                <p class="section-intro">Dengarkan pengalaman langsung dari pelanggan yang telah menggunakan layanan NOS.</p>
                 <a href="https://lenterakarya.github.io/testimoni-homestay/" target="_blank" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">
                     <i class="fas fa-comments"></i> Lihat Semua Testimoni
                 </a>
@@ -2853,6 +2933,7 @@
         <!-- Contact Section -->
         <section class="contact" id="contact">
             <h2 class="section-title">Hubungi Kami</h2>
+            <p class="section-intro">Kami siap membantu Anda 24/7. Hubungi kami untuk pertanyaan, masukan, atau bantuan teknis.</p>
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Informasi Kontak</h3>
