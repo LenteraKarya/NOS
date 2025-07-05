@@ -864,184 +864,6 @@
             box-shadow: 0 8px 25px rgba(230, 126, 34, 0.3);
         }
         
-        /* Gallery Section */
-        .gallery-intro {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-        
-        .gallery-intro p {
-            color: var(--text-light);
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.15rem;
-            line-height: 1.8;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-        
-        .gallery-item {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
-            position: relative;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s forwards;
-            border: 1px solid rgba(0, 0, 0, 0.03);
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            border-color: rgba(230, 126, 34, 0.1);
-        }
-        
-        .gallery-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--accent);
-            color: white;
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            z-index: 1;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            letter-spacing: 0.5px;
-        }
-        
-        .gallery-badge.discount {
-            background: var(--success);
-        }
-        
-        .gallery-image-container {
-            position: relative;
-            overflow: hidden;
-            height: 350px;
-            aspect-ratio: 16/9;
-        }
-        
-        .gallery-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.8s ease;
-            position: relative;
-        }
-        
-        .gallery-image.error::after {
-            content: "Gambar tidak tersedia";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-        
-        .gallery-item:hover .gallery-image {
-            transform: scale(1.08);
-        }
-        
-        .gallery-details {
-            padding: 2.5rem;
-        }
-        
-        .gallery-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--dark);
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .gallery-description {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .gallery-price {
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .gallery-price .original-price {
-            font-size: 0.9rem;
-            text-decoration: line-through;
-            color: var(--text-light);
-            font-weight: normal;
-        }
-        
-        .gallery-price .discount {
-            background: var(--success);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-left: 0.5rem;
-        }
-        
-        .gallery-specs {
-            margin-top: 1.5rem;
-            border-top: 1px solid #eee;
-            padding-top: 1.5rem;
-        }
-        
-        .spec-item {
-            display: flex;
-            margin-bottom: 1rem;
-        }
-        
-        .spec-label {
-            font-weight: 600;
-            color: var(--dark);
-            min-width: 120px;
-        }
-        
-        .spec-value {
-            color: var(--text-light);
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: 1.2rem;
-            margin-top: 2rem;
-        }
-        
-        .btn-small {
-            padding: 0.8rem 1.5rem;
-            font-size: 0.95rem;
-        }
-        
         /* Testimonial Button Section */
         .testimonial-button-section {
             padding: 6rem 0;
@@ -1682,10 +1504,6 @@
             .section-title {
                 font-size: 2.2rem;
             }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-            }
         }
         
         @media (max-width: 992px) {
@@ -1711,10 +1529,6 @@
             
             .contact-info, .contact-form {
                 padding: 3rem;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             }
             
             .nav-links {
@@ -1821,19 +1635,9 @@
                 font-size: 1.8rem;
             }
             
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            }
-            
             .contact-bar {
                 bottom: 1.5rem;
                 right: 1.5rem;
-            }
-            
-            .contact-btn {
-                width: 60px;
-                height: 60px;
-                font-size: 1.8rem;
             }
             
             .footer-container {
@@ -1877,10 +1681,6 @@
             
             .section-title {
                 font-size: 1.7rem;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
             }
             
             .action-buttons {
@@ -1995,6 +1795,10 @@
             border-radius: 50px;
             font-size: 0.8rem;
             margin-bottom: 1rem;
+        }
+
+        .driver-badge.inactive {
+            background: var(--danger);
         }
 
         .price-estimate {
@@ -2230,6 +2034,126 @@
             border-color: var(--accent);
             transform: translateY(-3px);
         }
+
+        /* Driver Registration Section */
+        .registration-section {
+            background: white;
+            border-radius: 16px;
+            padding: 4rem;
+            margin: 4rem auto;
+            max-width: 800px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .registration-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .option-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            padding: 0.8rem 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .option-btn:hover {
+            border-color: var(--accent);
+        }
+
+        .option-btn.selected {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .conditional-field {
+            display: none;
+            margin-top: 1rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .conditional-field.active {
+            display: block;
+        }
+
+        .cancel-btn {
+            background: var(--danger);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+
+        .cancel-btn:hover {
+            background: #c53030;
+        }
+
+        /* Google Places Autocomplete */
+        .pac-container {
+            z-index: 2000 !important;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+
+        .pac-item {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .pac-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .pac-item-query {
+            font-size: 1rem;
+            color: var(--dark);
+        }
+
+        .pac-matched {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Form Step Transitions */
+        .form-step {
+            transition: all 0.5s ease;
+        }
+
+        /* Hide form steps by default */
+        .form-step:not(.active) {
+            display: none;
+        }
+
+        /* Show active form step */
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -2306,6 +2230,7 @@
                 <a href="#drivers">Driver Kami</a>
                 <a href="#testimonials">Testimoni</a>
                 <a href="#contact">Kontak</a>
+                <a href="#register">Daftar Driver</a>
             </div>
         </div>
     </nav>
@@ -2363,7 +2288,7 @@
                 </div>
 
                 <!-- Step 1: Location -->
-                <div class="form-step" id="locationStep">
+                <div class="form-step active" id="locationStep">
                     <div class="map-container">
                         <div id="map"></div>
                     </div>
@@ -2387,7 +2312,7 @@
                 </div>
 
                 <!-- Step 2: Vehicle Selection -->
-                <div class="form-step" id="vehicleStep" style="display: none;">
+                <div class="form-step" id="vehicleStep">
                     <div class="price-estimate">
                         <div class="route-info">
                             <div class="route-point">
@@ -2450,7 +2375,7 @@
                 </div>
 
                 <!-- Step 3: Payment -->
-                <div class="form-step" id="paymentStep" style="display: none;">
+                <div class="form-step" id="paymentStep">
                     <div class="ride-summary">
                         <div class="route-info">
                             <div class="route-point">
@@ -2508,7 +2433,7 @@
                 </div>
 
                 <!-- Step 4: Confirmation -->
-                <div class="form-step" id="confirmationStep" style="display: none;">
+                <div class="form-step" id="confirmationStep">
                     <div class="ride-status">
                         <i class="fas fa-check-circle"></i>
                         <div>
@@ -2570,12 +2495,12 @@
                 <p>Driver profesional kami siap mengantarkan Anda dengan aman dan nyaman ke tujuan.</p>
             </div>
             
-            <div class="gallery-grid">
+            <div class="services-grid">
                 <!-- DRIVER ITEM 1 -->
                 <div class="driver-card">
                     <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Budi Santoso" class="driver-avatar">
-                    <div class="driver-badge">Tersedia</div>
-                    <h3 class="gallery-title">Budi Santoso</h3>
+                    <div class="driver-badge">Terdaftar</div>
+                    <h3 class="service-title">Budi Santoso</h3>
                     <div class="driver-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -2584,7 +2509,7 @@
                         <i class="fas fa-star-half-alt"></i>
                         4.7 (127)
                     </div>
-                    <p class="gallery-description">
+                    <p>
                         Pengalaman 5 tahun sebagai driver ojek. Selalu tepat waktu dan mengenal jalan alternatif di Situbondo.
                     </p>
                     
@@ -2611,8 +2536,8 @@
                 <!-- DRIVER ITEM 2 -->
                 <div class="driver-card">
                     <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ani Wijaya" class="driver-avatar">
-                    <div class="driver-badge">Tersedia</div>
-                    <h3 class="gallery-title">Ani Wijaya</h3>
+                    <div class="driver-badge">Terdaftar</div>
+                    <h3 class="service-title">Ani Wijaya</h3>
                     <div class="driver-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -2621,7 +2546,7 @@
                         <i class="fas fa-star"></i>
                         5.0 (89)
                     </div>
-                    <p class="gallery-description">
+                    <p>
                         Driver perempuan profesional dengan safety record sempurna. Spesialis antar jemput sekolah dan kantor.
                     </p>
                     
@@ -2648,8 +2573,8 @@
                 <!-- DRIVER ITEM 3 -->
                 <div class="driver-card">
                     <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Joko Prasetyo" class="driver-avatar">
-                    <div class="driver-badge" style="background: var(--warning);">Sibuk</div>
-                    <h3 class="gallery-title">Joko Prasetyo</h3>
+                    <div class="driver-badge inactive">Berhenti</div>
+                    <h3 class="service-title">Joko Prasetyo</h3>
                     <div class="driver-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -2658,7 +2583,7 @@
                         <i class="far fa-star"></i>
                         4.2 (203)
                     </div>
-                    <p class="gallery-description">
+                    <p>
                         Spesialis pengiriman barang dengan motor besar. Bisa mengangkut barang hingga 50kg dengan aman.
                     </p>
                     
@@ -2678,15 +2603,15 @@
                     </div>
                     
                     <div class="action-buttons">
-                        <button class="btn btn-primary btn-small order-btn" disabled>Sedang Bertugas</button>
+                        <button class="btn btn-primary btn-small order-btn" disabled>Tidak Tersedia</button>
                     </div>
                 </div>
                 
                 <!-- DRIVER ITEM 4 -->
                 <div class="driver-card">
                     <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Agus Setiawan" class="driver-avatar">
-                    <div class="driver-badge">Tersedia</div>
-                    <h3 class="gallery-title">Agus Setiawan</h3>
+                    <div class="driver-badge">Terdaftar</div>
+                    <h3 class="service-title">Agus Setiawan</h3>
                     <div class="driver-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -2695,7 +2620,7 @@
                         <i class="fas fa-star"></i>
                         4.9 (156)
                     </div>
-                    <p class="gallery-description">
+                    <p>
                         Driver mobil berpengalaman dengan kendaraan nyaman. Siap antar keluarga atau perjalanan bisnis.
                     </p>
                     
@@ -2721,65 +2646,126 @@
             </div>
         </section>
         
-        <!-- Gallery Section -->
-        <section class="gallery" id="gallery">
-            <h2 class="section-title">Galeri Kendaraan</h2>
-            <div class="gallery-intro">
-                <p>Lihat armada kendaraan kami yang terawat dan siap mengantar Anda dengan nyaman.</p>
-            </div>
-            
-            <div class="gallery-grid">
-                <!-- GALLERY ITEM 1 -->
-                <div class="gallery-item">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Motor Reguler" class="gallery-image lazy" loading="lazy">
+        <!-- Driver Registration Section -->
+        <section class="registration" id="register">
+            <h2 class="section-title">Daftar Menjadi Driver NOS</h2>
+            <div class="registration-section">
+                <form id="driverRegistrationForm">
+                    <div class="form-group">
+                        <label for="driverName">Nama Lengkap *</label>
+                        <input type="text" id="driverName" name="driverName" required pattern="[A-Za-z\s]+" title="Hanya huruf dan spasi yang diperbolehkan">
                     </div>
-                    <div class="gallery-details">
-                        <h3 class="gallery-title">Motor Reguler</h3>
-                        <p class="gallery-description">
-                            Armada motor reguler kami yang nyaman untuk perjalanan harian dengan harga terjangkau.
-                        </p>
+                    
+                    <div class="form-group">
+                        <label for="driverNIK">NIK *</label>
+                        <input type="text" id="driverNIK" name="driverNIK" required>
                     </div>
-                </div>
-                
-                <!-- GALLERY ITEM 2 -->
-                <div class="gallery-item">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Motor Premium" class="gallery-image lazy" loading="lazy">
+                    
+                    <div class="form-group">
+                        <label for="driverAddress">Alamat Lengkap *</label>
+                        <textarea id="driverAddress" name="driverAddress" required></textarea>
                     </div>
-                    <div class="gallery-details">
-                        <h3 class="gallery-title">Motor Premium</h3>
-                        <p class="gallery-description">
-                            Motor premium dengan helm dan jaket standar untuk kenyamanan dan keamanan maksimal.
-                        </p>
+                    
+                    <div class="form-group">
+                        <label for="driverPhone">Nomor WhatsApp *</label>
+                        <input type="tel" id="driverPhone" name="driverPhone" required pattern="^\+62\d{9,12}$|^0\d{9,12}$" title="Format nomor Indonesia (contoh: +6281234567890 atau 081234567890)">
                     </div>
-                </div>
-                
-                <!-- GALLERY ITEM 3 -->
-                <div class="gallery-item">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mobil Penumpang" class="gallery-image lazy" loading="lazy">
+                    
+                    <div class="form-group">
+                        <label for="driverPlate">Nomor Polisi Kendaraan *</label>
+                        <input type="text" id="driverPlate" name="driverPlate" required>
                     </div>
-                    <div class="gallery-details">
-                        <h3 class="gallery-title">Mobil Penumpang</h3>
-                        <p class="gallery-description">
-                            Armada mobil nyaman untuk keluarga atau perjalanan bisnis dengan kapasitas hingga 4 penumpang.
-                        </p>
+                    
+                    <div class="form-group">
+                        <label>Jenis Kendaraan *</label>
+                        <div class="option-group">
+                            <button type="button" class="option-btn" data-value="motor">Motor</button>
+                            <button type="button" class="option-btn" data-value="mobil">Mobil</button>
+                        </div>
+                        <input type="hidden" id="vehicleType" name="vehicleType" required>
                     </div>
-                </div>
-                
-                <!-- GALLERY ITEM 4 -->
-                <div class="gallery-item">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Motor Barang" class="gallery-image lazy" loading="lazy">
+                    
+                    <div class="form-group">
+                        <label>Status Kepemilikan Kendaraan *</label>
+                        <div class="option-group">
+                            <button type="button" class="option-btn" data-value="pribadi">Milik Pribadi</button>
+                            <button type="button" class="option-btn" data-value="pinjam">Pinjam/Sewa</button>
+                        </div>
+                        <input type="hidden" id="vehicleOwnership" name="vehicleOwnership" required>
+                        
+                        <div class="conditional-field" id="ownerField">
+                            <label for="vehicleOwner">Nama Pemilik Kendaraan *</label>
+                            <input type="text" id="vehicleOwner" name="vehicleOwner" pattern="[A-Za-z\s]+" title="Hanya huruf dan spasi yang diperbolehkan">
+                        </div>
                     </div>
-                    <div class="gallery-details">
-                        <h3 class="gallery-title">Motor Barang</h3>
-                        <p class="gallery-description">
-                            Motor khusus pengiriman barang dengan kapasitas angkut besar untuk kebutuhan bisnis Anda.
-                        </p>
+                    
+                    <div class="form-group">
+                        <label>Status Surat Kendaraan *</label>
+                        <div class="option-group">
+                            <button type="button" class="option-btn" data-value="lengkap">Lengkap</button>
+                            <button type="button" class="option-btn" data-value="tidak-lengkap">Tidak Lengkap</button>
+                        </div>
+                        <input type="hidden" id="vehicleDocuments" name="vehicleDocuments" required>
+                        
+                        <div class="conditional-field" id="cancelDocsField">
+                            <button type="button" class="cancel-btn" id="cancelDocsBtn">
+                                <i class="fas fa-times"></i> Saya Batalkan Pendaftaran
+                            </button>
+                        </div>
                     </div>
-                </div>
+                    
+                    <div class="form-group">
+                        <label>Memiliki SIM *</label>
+                        <div class="option-group">
+                            <button type="button" class="option-btn" data-value="sim-a">SIM A</button>
+                            <button type="button" class="option-btn" data-value="sim-b">SIM B</button>
+                            <button type="button" class="option-btn" data-value="sim-c">SIM C</button>
+                            <button type="button" class="option-btn" data-value="sim-c1">SIM C1</button>
+                        </div>
+                        <input type="hidden" id="driverLicense" name="driverLicense" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Status SIM *</label>
+                        <div class="option-group">
+                            <button type="button" class="option-btn" data-value="aktif">Aktif</button>
+                            <button type="button" class="option-btn" data-value="non-aktif">Non Aktif</button>
+                        </div>
+                        <input type="hidden" id="licenseStatus" name="licenseStatus" required>
+                        
+                        <div class="conditional-field" id="cancelLicenseField">
+                            <button type="button" class="cancel-btn" id="cancelLicenseBtn">
+                                <i class="fas fa-times"></i> Saya Batalkan Pendaftaran
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Apakah siap menjadi DRIVER NOS yang jujur, bertanggung jawab dan mematuhi aturan lalu lintas? *</label>
+                        <div class="option-group">
+                            <button type="button" class="option-btn" data-value="iya">Iya Siap</button>
+                            <button type="button" class="option-btn" data-value="tidak">Tidak Siap</button>
+                        </div>
+                        <input type="hidden" id="readiness" name="readiness" required>
+                        
+                        <div class="conditional-field" id="cancelReadinessField">
+                            <button type="button" class="cancel-btn" id="cancelReadinessBtn">
+                                <i class="fas fa-times"></i> Saya Batalkan Pendaftaran
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="conditional-field" id="termsField">
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <label for="agreeTerms">Saya menyetujui persyaratan, ketentuan dan peraturan yang ditetapkan oleh founder LENTERA KARYA SITUBONDO</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submitRegistrationBtn">
+                            <i class="fas fa-paper-plane"></i> Kirim Pendaftaran
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
         
@@ -2906,6 +2892,7 @@
                     <li><a href="#drivers">Driver Kami</a></li>
                     <li><a href="#testimonials">Testimoni</a></li>
                     <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#register">Daftar Driver</a></li>
                 </ul>
             </div>
             
@@ -2961,11 +2948,11 @@
                 </div>
                 <div class="form-group">
                     <label for="quickPickup">Lokasi Penjemputan *</label>
-                    <input type="text" id="quickPickup" name="pickup" required>
+                    <input type="text" id="quickPickup" name="pickup" required class="location-autocomplete">
                 </div>
                 <div class="form-group">
                     <label for="quickDestination">Tujuan *</label>
-                    <input type="text" id="quickDestination" name="destination" required>
+                    <input type="text" id="quickDestination" name="destination" required class="location-autocomplete">
                 </div>
                 <button type="submit" class="btn btn-primary">
                     <i class="fas fa-paper-plane"></i> Kirim Permintaan
@@ -2974,11 +2961,18 @@
         </div>
     </div>
     
-    <!-- Image Zoom Modal -->
-    <div class="image-modal" id="imageModal">
-        <div class="image-modal-content">
-            <span class="close-image-modal">&times;</span>
-            <img id="zoomedImage" src="" alt="Zoomed Image">
+    <!-- Registration Success Modal -->
+    <div class="modal" id="registrationSuccessModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Pendaftaran Berhasil!</h2>
+            <div class="form-status success">
+                <i class="fas fa-check-circle"></i>
+                <p>Terima kasih telah mendaftar sebagai driver NOS. Tim kami akan menghubungi Anda melalui WhatsApp untuk proses selanjutnya.</p>
+            </div>
+            <button type="button" class="btn btn-primary" id="closeSuccessModal">
+                <i class="fas fa-check"></i> Mengerti
+            </button>
         </div>
     </div>
     
@@ -2988,6 +2982,9 @@
     <!-- Leaflet JS for Maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <!-- Google Places API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
     
     <script>
         // Loading Screen
@@ -3001,6 +2998,9 @@
             
             // Initialize map
             initMap();
+            
+            // Initialize particles
+            initParticles();
         });
         
         // Background Music Control
@@ -3100,42 +3100,6 @@
             }
         });
         
-        // Animasi Scroll untuk Gallery Items
-        function animateOnScroll() {
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            const windowHeight = window.innerHeight;
-            const scrollPosition = window.scrollY + windowHeight;
-            
-            galleryItems.forEach((item, index) => {
-                const itemPosition = item.offsetTop;
-                
-                if (scrollPosition > itemPosition + 100) {
-                    item.style.animationDelay = `${index * 0.1}s`;
-                    item.style.animationName = 'fadeInUp';
-                }
-            });
-        }
-        
-        // Lazy Load Images
-        function lazyLoadImages() {
-            const lazyImages = document.querySelectorAll('.lazy');
-            
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            
-            lazyImages.forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-        
         // Initialize Map
         function initMap() {
             // Default coordinates for Situbondo
@@ -3150,6 +3114,33 @@
             const marker = L.marker(situbondoCoords).addTo(map)
                 .bindPopup('NOS - Network Ojek Situbondo')
                 .openPopup();
+        }
+        
+        // Initialize Google Places Autocomplete
+        function initAutocomplete() {
+            // For quick booking modal
+            const pickupInput = document.getElementById('quickPickup');
+            const destinationInput = document.getElementById('quickDestination');
+            
+            if (pickupInput) {
+                const pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
+            }
+            
+            if (destinationInput) {
+                const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+            }
+            
+            // For main booking form
+            const mainPickupInput = document.getElementById('pickupLocation');
+            const mainDestinationInput = document.getElementById('destination');
+            
+            if (mainPickupInput) {
+                const mainPickupAutocomplete = new google.maps.places.Autocomplete(mainPickupInput);
+            }
+            
+            if (mainDestinationInput) {
+                const mainDestinationAutocomplete = new google.maps.places.Autocomplete(mainDestinationInput);
+            }
         }
         
         // Order Form Steps Navigation
@@ -3188,8 +3179,8 @@
             document.getElementById('priceEstimate').textContent = `Rp ${basePrice.toLocaleString('id-ID')}`;
             
             // Change steps
-            steps.location.style.display = 'none';
-            steps.vehicle.style.display = 'block';
+            steps.location.classList.remove('active');
+            steps.vehicle.classList.add('active');
             
             // Update progress
             document.getElementById('step1').classList.remove('active');
@@ -3201,8 +3192,8 @@
         
         // Back to Location Step
         stepButtons.backToLocation.addEventListener('click', function() {
-            steps.vehicle.style.display = 'none';
-            steps.location.style.display = 'block';
+            steps.vehicle.classList.remove('active');
+            steps.location.classList.add('active');
             
             // Update progress
             document.getElementById('step2').classList.remove('active');
@@ -3236,8 +3227,8 @@
             document.getElementById('selectedVehicle').value = vehicleName;
             
             // Change steps
-            steps.vehicle.style.display = 'none';
-            steps.payment.style.display = 'block';
+            steps.vehicle.classList.remove('active');
+            steps.payment.classList.add('active');
             
             // Update progress
             document.getElementById('step2').classList.remove('active');
@@ -3249,8 +3240,8 @@
         
         // Back to Vehicle Step
         stepButtons.backToVehicle.addEventListener('click', function() {
-            steps.payment.style.display = 'none';
-            steps.vehicle.style.display = 'block';
+            steps.payment.classList.remove('active');
+            steps.vehicle.classList.add('active');
             
             // Update progress
             document.getElementById('step3').classList.remove('active');
@@ -3285,8 +3276,8 @@
             console.log('Order submitted:', formData);
             
             // Show confirmation
-            steps.payment.style.display = 'none';
-            steps.confirmation.style.display = 'block';
+            steps.payment.classList.remove('active');
+            steps.confirmation.classList.add('active');
             
             // Update progress
             document.getElementById('step3').classList.remove('active');
@@ -3320,8 +3311,8 @@
             });
             
             // Go back to first step
-            steps.confirmation.style.display = 'none';
-            steps.location.style.display = 'block';
+            steps.confirmation.classList.remove('active');
+            steps.location.classList.add('active');
             
             // Reset progress
             document.getElementById('step1').classList.add('active');
@@ -3438,10 +3429,6 @@
                 quickBookingModal.classList.remove('show');
                 document.body.style.overflow = '';
             }
-            if (e.target === document.getElementById('imageModal')) {
-                document.getElementById('imageModal').classList.remove('show');
-                document.body.style.overflow = '';
-            }
         });
         
         // Quick booking form submission
@@ -3522,7 +3509,7 @@
                 if (this.disabled) return;
                 
                 const driverCard = this.closest('.driver-card');
-                const driverName = driverCard.querySelector('.gallery-title').textContent;
+                const driverName = driverCard.querySelector('.service-title').textContent;
                 const driverVehicle = driverCard.querySelector('.spec-item:nth-child(1) .spec-value').textContent;
                 
                 const message = `Halo NOS, saya ingin memesan ojek dengan driver ${driverName} (${driverVehicle}). Mohon info lebih lanjut.`;
@@ -3660,6 +3647,178 @@
             playButtonSound();
         });
         
+        // Driver Registration Form
+        const registrationForm = document.getElementById('driverRegistrationForm');
+        
+        // Option button functionality
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const group = this.closest('.form-group');
+                const hiddenInput = group.querySelector('input[type="hidden"]');
+                
+                // Remove selected class from all buttons in this group
+                group.querySelectorAll('.option-btn').forEach(b => {
+                    b.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked button
+                this.classList.add('selected');
+                
+                // Update hidden input value
+                hiddenInput.value = this.dataset.value;
+                
+                // Handle conditional fields
+                if (hiddenInput.id === 'vehicleOwnership') {
+                    if (this.dataset.value === 'pinjam') {
+                        document.getElementById('ownerField').classList.add('active');
+                    } else {
+                        document.getElementById('ownerField').classList.remove('active');
+                    }
+                }
+                
+                if (hiddenInput.id === 'vehicleDocuments') {
+                    if (this.dataset.value === 'tidak-lengkap') {
+                        document.getElementById('cancelDocsField').classList.add('active');
+                    } else {
+                        document.getElementById('cancelDocsField').classList.remove('active');
+                    }
+                }
+                
+                if (hiddenInput.id === 'licenseStatus') {
+                    if (this.dataset.value === 'non-aktif') {
+                        document.getElementById('cancelLicenseField').classList.add('active');
+                    } else {
+                        document.getElementById('cancelLicenseField').classList.remove('active');
+                    }
+                }
+                
+                if (hiddenInput.id === 'readiness') {
+                    if (this.dataset.value === 'iya') {
+                        document.getElementById('termsField').classList.add('active');
+                    } else {
+                        document.getElementById('termsField').classList.remove('active');
+                        document.getElementById('cancelReadinessField').classList.add('active');
+                    }
+                }
+                
+                playButtonSound();
+            });
+        });
+        
+        // Cancel buttons
+        document.getElementById('cancelDocsBtn').addEventListener('click', function() {
+            registrationForm.reset();
+            document.querySelectorAll('.conditional-field').forEach(field => {
+                field.classList.remove('active');
+            });
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            playButtonSound();
+        });
+        
+        document.getElementById('cancelLicenseBtn').addEventListener('click', function() {
+            registrationForm.reset();
+            document.querySelectorAll('.conditional-field').forEach(field => {
+                field.classList.remove('active');
+            });
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            playButtonSound();
+        });
+        
+        document.getElementById('cancelReadinessBtn').addEventListener('click', function() {
+            registrationForm.reset();
+            document.querySelectorAll('.conditional-field').forEach(field => {
+                field.classList.remove('active');
+            });
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            playButtonSound();
+        });
+        
+        // Form submission
+        registrationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitRegistrationBtn');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+            
+            // Prepare form data
+            const formData = new FormData(registrationForm);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Send to FormSubmit.co (email)
+            fetch('https://formsubmit.co/ajax/lenterakaryasitubondo@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    _subject: 'Pendaftaran Driver Baru NOS',
+                    ...data
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Also send to WhatsApp
+                const whatsappMessage = `*PENDAFTARAN DRIVER BARU NOS*\n\n` +
+                    `Nama: ${data.driverName}\n` +
+                    `NIK: ${data.driverNIK}\n` +
+                    `Alamat: ${data.driverAddress}\n` +
+                    `No. WhatsApp: ${data.driverPhone}\n` +
+                    `No. Polisi: ${data.driverPlate}\n` +
+                    `Jenis Kendaraan: ${data.vehicleType}\n` +
+                    `Status Kepemilikan: ${data.vehicleOwnership}${data.vehicleOwner ? ` (Pemilik: ${data.vehicleOwner})` : ''}\n` +
+                    `Status Surat Kendaraan: ${data.vehicleDocuments}\n` +
+                    `SIM: ${data.driverLicense}\n` +
+                    `Status SIM: ${data.licenseStatus}\n` +
+                    `Kesediaan: ${data.readiness === 'iya' ? 'Siap' : 'Tidak Siap'}`;
+                
+                const encodedWhatsappMessage = encodeURIComponent(whatsappMessage);
+                window.open(`https://wa.me/message/2A672ZFTMLKBO1?text=${encodedWhatsappMessage}`, '_blank');
+                
+                // Show success modal
+                document.getElementById('registrationSuccessModal').classList.add('show');
+                document.body.style.overflow = 'hidden';
+                
+                // Reset form
+                registrationForm.reset();
+                document.querySelectorAll('.conditional-field').forEach(field => {
+                    field.classList.remove('active');
+                });
+                document.querySelectorAll('.option-btn').forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+            })
+            .catch(error => {
+                alert('Terjadi kesalahan saat mengirim formulir. Silakan coba lagi atau hubungi kami langsung melalui WhatsApp.');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+            
+            playButtonSound();
+        });
+        
+        // Close success modal
+        document.getElementById('closeSuccessModal').addEventListener('click', function() {
+            document.getElementById('registrationSuccessModal').classList.remove('show');
+            document.body.style.overflow = '';
+            playButtonSound();
+        });
+        
         // Play button sound function
         function playButtonSound() {
             const sound = document.getElementById('buttonSound');
@@ -3683,50 +3842,12 @@
             });
         });
         
-        // Handle image loading errors
-        document.querySelectorAll('.gallery-image').forEach(img => {
-            img.addEventListener('error', function() {
-                this.classList.add('error');
-            });
-        });
-        
-        // Jalankan saat halaman dimuat
-        window.addEventListener('load', function() {
-            initParticles();
-            animateOnScroll();
-            lazyLoadImages();
-            
-            // Animasi header elements
-            setTimeout(() => {
-                document.querySelector('.tagline').style.animation = 'fadeInUp 1s ease-out 0.3s forwards';
-                document.querySelector('.header-search').style.animation = 'fadeInUp 1s ease-out 0.5s forwards';
-                document.querySelector('.header-buttons').style.animation = 'fadeInUp 1s ease-out 0.6s forwards';
-            }, 300);
-        });
-        
-        // Jalankan saat scroll
-        window.addEventListener('scroll', animateOnScroll);
-        
-        // Zoom image functionality
-        document.querySelectorAll('.gallery-image').forEach(img => {
-            img.addEventListener('click', function() {
-                const zoomedImage = document.getElementById('zoomedImage');
-                zoomedImage.src = this.src;
-                zoomedImage.alt = this.alt;
-                
-                const imageModal = document.getElementById('imageModal');
-                imageModal.classList.add('show');
-                document.body.style.overflow = 'hidden';
-                
-                playButtonSound();
-            });
-        });
-        
-        // Close image modal
-        document.querySelector('.close-image-modal').addEventListener('click', function() {
-            document.getElementById('imageModal').classList.remove('show');
-            document.body.style.overflow = '';
-        });
+        // Animasi header elements
+        setTimeout(() => {
+            document.querySelector('.tagline').style.animation = 'fadeInUp 1s ease-out 0.3s forwards';
+            document.querySelector('.header-search').style.animation = 'fadeInUp 1s ease-out 0.5s forwards';
+            document.querySelector('.header-buttons').style.animation = 'fadeInUp 1s ease-out 0.6s forwards';
+        }, 300);
     </script>
 </body>
 </html>
